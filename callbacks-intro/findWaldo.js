@@ -1,4 +1,3 @@
-// The second argument/parameter is expected to be a function
 function findWaldo (list, found) {
   for (let i = 0; i < list.length; i++) {
     if (list[i] === 'Waldo') {
