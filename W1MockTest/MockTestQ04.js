@@ -29,10 +29,10 @@ const round = function(number) {
 };
 
 const stdev = function(arr) {
-  const n = arr.length
-  const m = arr.reduce((a, b) => a + b) / n
-  console.log(Math.sqrt(arr.map(x => Math.pow(x - m, 2)).reduce((a, b) => a + b) / n))
+  const n = arr.length;
+  const m = arr.reduce((a, b) => a + b) / n;
+  return round(Math.sqrt(arr.map(x => Math.pow(x - m, 2)).reduce((a, b) => a + b) / n));
 };
-// round function says "do not alter" leaving as is, numbers will be a couple floaters off(not rounded)
+
 // Don't change below:
 module.exports = { stdev };
