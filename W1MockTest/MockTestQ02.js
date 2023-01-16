@@ -23,10 +23,10 @@ const round = function(number) {
  *    4
  */
 const median = function(arr) {
-  const mid = Math.floor(arr.length / 2),
-    nums = [...arr].sort((a, b) => a - b);
-  console.log (arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2)
-}
+  const mid = Math.floor(arr.length / 2);
+  nums = [...arr].sort((a, b) => a - b);
+  return round(arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2);
+};
 
 
 // Don't change below:
