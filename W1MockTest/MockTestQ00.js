@@ -18,10 +18,10 @@
 const count = function(arr) {
   let total = 0;
   for (i in arr) {
-    total++
+    total++;
   }
-  console.log(total)
-}
+  return (total);
+};
 
 /* ===========================================================================
  * SUM - the sum of the numbers in a list
@@ -36,11 +36,11 @@ const count = function(arr) {
  *    36
  */
 const sum = function(arr) {
-  let totalSum = 0
+  let totalSum = 0;
   for (const i in arr) {
-    totalSum += arr[i]
+    totalSum += arr[i];
   }
-  console.log(totalSum)
+  return (totalSum);
 };
 
 // To be used by mean. Do not alter.
@@ -62,15 +62,18 @@ const round = function(number) {
  *    4
  */
 const mean = function(arr) {
-  let totalSum = 0
-  for (const i in arr) {
-    totalSum += arr[i]
+  let totalSum = 0;
+  if (!arr.length) {
+    return null;
   }
-  const numsCnt = arr.length
-  const average = totalSum / numsCnt
+  for (const i in arr) {
+    totalSum += arr[i];
+  }
+  const numsCnt = arr.length;
+  const average = totalSum / numsCnt;
 
-  console.log('Average is: ' + average)
-}
+  return round(average);
+};
 
 // Don't change below:
 module.exports = { count, sum, mean };
